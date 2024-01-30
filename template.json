@@ -1,0 +1,65 @@
+{
+  "type": "message",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+        "type": "AdaptiveCard",
+        "version": "1.4",
+        "body": [
+          {
+            "type": "TextBlock",
+            "text": "%s",
+            "size": "Medium",
+            "weight": "Bolder"
+          },
+          {
+            "type": "FactSet",
+            "facts": [
+              { "title": "Umgebung:", "value": "%s" },
+              { "title": "Anwendung:", "value": "%s" },
+              { "title": "Version:", "value": "%s" }
+            ]
+          },
+          {
+            "type": "ColumnSet",
+            "separator": true,
+            "spacing": "ExtraLarge",
+            "columns": [
+              {
+                "type": "Column",
+                "width": "auto",
+                "items": [
+                  {
+                    "type": "Image",
+                    "url": "https://github.com/%s.png",
+                    "style": "Person",
+                    "size": "Small"
+                  }
+                ]
+              },
+              {
+                "type": "Column",
+                "items": [
+                  {
+                    "type": "TextBlock",
+                    "text": "%s",
+                    "weight": "Bolder"
+                  },
+                  {
+                    "type": "TextBlock",
+                    "text": "am %s um %s Uhr",
+                    "size": "Small",
+                    "spacing": "None",
+                    "isSubtle": true
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

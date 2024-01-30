@@ -1,0 +1,29 @@
+name: teams notification
+description: Send a notification to Microsoft Teams
+inputs:
+  webhook:
+    description: Webhook URL
+    required: true
+  title:
+    description: Title for the notification
+    required: true
+  env:
+    description: Name of the environment
+    required: true
+  application:
+    description: Name of the application
+    required: true
+  version:
+    description: Version of the application
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - run: ${GITHUB_ACTION_PATH}/notify.sh
+      shell: bash
+      env:
+        WEBHOOK: ${{ inputs.webhook }}
+        ENV: ${{ inputs.env }}
+        APPLICATION: ${{ inputs.application }}
+        VERSION: ${{ inputs.version }}
+        TITLE: ${{ inputs.title }}
