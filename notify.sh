@@ -8,7 +8,7 @@ TIME=`TZ=Europe/Berlin date +"%H:%M"`
 JSON_TEMPLATE=`cat $GITHUB_ACTION_PATH/template.json`
 
 # generate json
-printf -v JSON "$JSON_TEMPLATE" "$TITLE" "$ENV" "$APPLICATION" "$VERSION" "$GITHUB_ACTOR" "$GITHUB_ACTOR" "$DATE" "$TIME"
+printf -v JSON "$JSON_TEMPLATE" "$STATUS" "$TITLE" "$ENV" "$APPLICATION" "$VERSION" "$GITHUB_ACTOR" "$GITHUB_ACTOR" "$DATE" "$TIME"
 
 # send notification
 curl --location "$WEBHOOK" --header "Content-Type: application/json" --data "$JSON"

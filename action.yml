@@ -4,6 +4,9 @@ inputs:
   webhook:
     description: Webhook URL
     required: true
+  status:
+    description: Some status text, e.g. toJson(job.status)
+    required: true
   title:
     description: Title for the notification
     required: true
@@ -26,4 +29,5 @@ runs:
         ENV: ${{ inputs.env }}
         APPLICATION: ${{ inputs.application }}
         VERSION: ${{ inputs.version }}
+        STATUS: ${{ inputs.status }}
         TITLE: ${{ inputs.title }}
