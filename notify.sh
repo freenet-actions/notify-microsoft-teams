@@ -7,6 +7,9 @@ TIME=`TZ=Europe/Berlin date +"%H:%M"`
 # read template
 JSON_TEMPLATE=`cat $GITHUB_ACTION_PATH/template.json`
 
+# remove any quotes from the status value
+STATUS=`echo "$STATUS" | tr -d '"'`
+
 # generate json
 printf -v JSON "$JSON_TEMPLATE" "$STATUS" "$TITLE" "$ENV" "$APPLICATION" "$VERSION" "$GITHUB_ACTOR" "$GITHUB_ACTOR" "$DATE" "$TIME"
 
