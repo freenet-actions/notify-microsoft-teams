@@ -10,52 +10,19 @@
         "body": [
           {
             "type": "TextBlock",
-            "text": "%s: %s",
-            "size": "Medium",
-            "weight": "Bolder"
+            "text": "%s",
+            "size": "large",
+            "weight": "Bolder",
+            "wrap": true
           },
           {
             "type": "FactSet",
             "facts": [
+              { "title": "Status:", "value": "%s" },
               { "title": "Umgebung:", "value": "%s" },
               { "title": "Anwendung:", "value": "%s" },
-              { "title": "Version:", "value": "%s" }
-            ]
-          },
-          {
-            "type": "ColumnSet",
-            "separator": true,
-            "spacing": "ExtraLarge",
-            "columns": [
-              {
-                "type": "Column",
-                "width": "auto",
-                "items": [
-                  {
-                    "type": "Image",
-                    "url": "https://github.com/%s.png",
-                    "style": "Person",
-                    "size": "Small"
-                  }
-                ]
-              },
-              {
-                "type": "Column",
-                "items": [
-                  {
-                    "type": "TextBlock",
-                    "text": "%s",
-                    "weight": "Bolder"
-                  },
-                  {
-                    "type": "TextBlock",
-                    "text": "am %s um %s Uhr",
-                    "size": "Small",
-                    "spacing": "None",
-                    "isSubtle": true
-                  }
-                ]
-              }
+              { "title": "Version:", "value": "%s" },
+              { "title": "Autor:", "value": "%s" }
             ]
           }
         ]
