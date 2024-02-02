@@ -31,3 +31,7 @@ export VERSION=42
 export GITHUB_ACTOR=aabeling
 ./notify.sh
 ```
+
+## Release management
+
+For releases we use tags. Please refer to https://docs.github.com/en/actions/creating-actions/about-custom-actions#using-release-management-for-actions
