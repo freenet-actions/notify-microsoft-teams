@@ -11,7 +11,7 @@ JSON_TEMPLATE=`cat $GITHUB_ACTION_PATH/template.json`
 STATUS=`echo "$STATUS" | tr -d '"'`
 
 # generate json
-printf -v JSON "$JSON_TEMPLATE" "$STATUS" "$TITLE" "$ENV" "$APPLICATION" "$VERSION" "$GITHUB_ACTOR" "$GITHUB_ACTOR" "$DATE" "$TIME"
+printf -v JSON "$JSON_TEMPLATE" "$TITLE" "$STATUS" "$ENV" "$APPLICATION" "$VERSION" "$GITHUB_ACTOR"
 
 # send notification
 curl --location "$WEBHOOK" --header "Content-Type: application/json" --data "$JSON"
