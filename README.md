@@ -35,3 +35,5 @@ export GITHUB_ACTOR=aabeling
 ## Release management
 
 For releases we use tags. Please refer to https://docs.github.com/en/actions/creating-actions/about-custom-actions#using-release-management-for-actions
+
+New tags can be set with `git tag -a v1.4 -m "my version 1.4"` which will tag the current HEAD. Pushing is done with `git push --tags`.
