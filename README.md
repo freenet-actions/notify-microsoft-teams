@@ -16,6 +16,8 @@ This action is used to send a notification to Microsoft Teams.
     version: Version of the application
 ```
 
+The `notify.sh` uses curl to make the notification request. So, make sure you have it installed in the runner/container where this action is used.
+
 ## Local testing
 
 You can test the notification script locally:
